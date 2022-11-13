@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import About from './About';
+import NavBar from './NavBar';
+import EntryForm from './EntryForm';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           Learn React
         </a>
       </header>
+      {/*<NavBar/>*/}
+      <EntryForm/>
       <About/>
     </div>
     
