@@ -1,7 +1,8 @@
 import React from 'react';
 
 
-function Playlist() {
+function Playlist({songList}) {
+    
     return (
         <div></div>
     )

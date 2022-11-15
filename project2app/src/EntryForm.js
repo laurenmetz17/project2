@@ -19,7 +19,6 @@ function EntryForm({songList, setSongList}) {
         console.log(entryInfo);
 
         const newEntry = <MemoryCard entryInfo={entryInfo} />
-
         setSongList([...songList, newEntry]);
 
     }
@@ -34,7 +33,7 @@ function EntryForm({songList, setSongList}) {
             <h2>Memory :</h2>
             <input type="text" name='memory' />
             <h2></h2>
-            <input type="submit" value="submit" />
+            <input type="submit" value="Submit" />
         </form>
     )
 
