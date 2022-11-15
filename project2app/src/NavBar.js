@@ -1,4 +1,4 @@
-import { Route , NavLink} from "react-router-dom";
+import { BrowserRouter, Route, NavLink, Switch } from "react-router-dom";
 import About from './About';
 import Playlist from './Playlist';
 import EntryForm from "./EntryForm";
@@ -6,11 +6,22 @@ import EntryForm from "./EntryForm";
 
 function NavBar() {
 
+    const linkStyles = {
+        display: "inline-block",
+        width: "50px",
+        padding: "12px",
+        margin: "0 6px 6px",
+        background: "blue",
+        textDecoration: "none",
+        color: "white",
+      };
+
     return (
         <div id="links">
-            <NavLink>About</NavLink>
-            <NavLink>PLaylist</NavLink>
-            <NavLink>Create Entry</NavLink>
+            <NavLink to="/" exact style={linkStyles} activeStyle={{background: "darkblue",}}>About</NavLink>
+            <NavLink to="/createEntry" exact style={linkStyles} activeStyle={{background: "darkblue",}}>Create Entry</NavLink>
+            <NavLink to="/playlist" exact style={linkStyles} activeStyle={{background: "darkblue",}}>Your Playlist</NavLink>
+
         </div>
         
     )

@@ -1,10 +1,15 @@
 import logo from './logo.svg';
+import {React, useState} from 'react';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
 import About from './About';
 import NavBar from './NavBar';
 import EntryForm from './EntryForm';
+import Playlist from './Playlist';
 
 function App() {
+
+  const [songList, setSongList] = useState([]);
   return (
     <div className="App">
       <header className="App-header">
@@ -21,9 +26,12 @@ function App() {
           Learn React
         </a>
       </header>
-      {/*<NavBar/>*/}
-      <EntryForm/>
-      <About/>
+      <NavBar/>
+      <Routes>
+        <Route path="/playlist" element={<Playlist/>}/>
+        <Route path="/createEntry"element={<EntryForm setSongList={setSongList} songList={songList}/>}/>
+        <Route path="/" element={<About />} />
+    </Routes>
     </div>
     
   );
