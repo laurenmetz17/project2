@@ -1,8 +1,8 @@
 import React from 'react';
 
-function MemoryCard({entryInfo}) {
+function MemoryCard({entry}) {
 
-    const [songTitle,artist,date, memory] = entryInfo;
+    const {songTitle,artist,date, memory} = entry;
     return(
         <div>
             <card>

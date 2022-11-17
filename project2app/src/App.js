@@ -9,13 +9,13 @@ import Playlist from './Playlist';
 
 function App() {
 
-  const [songList, setSongList] = useState([]);
+  const [entries, setEntries] = useState([]);
   return (
     <div className="App">
       <NavBar/>
       <Routes>
-        <Route path="/playlist" element={<Playlist songList={songList}/>}/>
-        <Route path="/createEntry"element={<EntryForm setSongList={setSongList} songList={songList}/>}/>
+        <Route path="/playlist" element={<Playlist entries={entries}/>}/>
+        <Route path="/createEntry"element={<EntryForm setEntries={setEntries} entries={entries}/>}/>
         <Route path="/" element={<About />} />
     </Routes>
     </div>

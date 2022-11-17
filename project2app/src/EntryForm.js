@@ -1,7 +1,7 @@
 import {React, useEffect, useState, useRef} from 'react';
 import MemoryCard from './MemoryCard';
 
-function EntryForm({songList, setSongList}) {
+function EntryForm({entries, setEntries}) {
 
     let entryInfo = {};
 
@@ -19,8 +19,7 @@ function EntryForm({songList, setSongList}) {
 
         console.log(entryInfo);
 
-        const newEntry = <MemoryCard entryInfo={entryInfo} />
-        setSongList([...songList, newEntry]);
+        setEntries([...entries, entryInfo]);
     }
     
 

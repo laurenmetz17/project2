@@ -1,10 +1,17 @@
 import React from 'react';
+import MemoryCard from './MemoryCard';
 
 
-function Playlist({songList}) {
-    
+function Playlist({entries}) {
+
+    const entryItems = entries.map(entry => (
+        <MemoryCard entry={entry}/>
+    ))
+
     return (
-        <div></div>
+        <div>
+            {entryItems}
+        </div>
     )
 
 }
