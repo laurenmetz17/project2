@@ -1,29 +1,32 @@
-import {React, useState} from 'react';
+import {React, useEffect, useState, useRef} from 'react';
 import MemoryCard from './MemoryCard';
 
 function EntryForm({songList, setSongList}) {
 
-    const [songTitle, setSongTitle] = useState("");
-    const [artist, setArtist] = useState("");
-    const [date, setDate] = useState("");
-    const [memory, setMemory] = useState("");
+    let entryInfo = {};
 
     function createEntry(event) {
         event.preventDefault();
-        setSongTitle(event.target.children[1].value);
-        setArtist(event.target.children[3].value);
-        setDate(event.target.children[5].value);
-        setMemory(memory => memory = event.target.children[7].value);
-        //not updating state immediately 
-        const entryInfo = [songTitle, artist, date, memory];
+        const songTitle = event.target.children[1].value;
+        const artist =event.target.children[3].value;
+        const date = event.target.children[5].value;
+        const memory = event.target.children[7].value;
+
+        entryInfo.songTitle = songTitle;
+        entryInfo.artist = artist;
+        entryInfo.date = date;
+        entryInfo.memory = memory;
+
         console.log(entryInfo);
 
         const newEntry = <MemoryCard entryInfo={entryInfo} />
         setSongList([...songList, newEntry]);
-
     }
+    
+
+
     return (
-        <form id="entry" onSubmit={createEntry}>
+        <form id="entry" onSubmit={createEntry} >
             <h2>Song Title :</h2>
             <input type="text" name="song-title" />
             <h2>Artist :</h2>
@@ -33,7 +36,7 @@ function EntryForm({songList, setSongList}) {
             <h2>Memory :</h2>
             <input type="text" name='memory' />
             <h2></h2>
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit"  />
         </form>
     )
 
