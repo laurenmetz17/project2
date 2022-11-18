@@ -5,7 +5,7 @@ import MemoryCard from './MemoryCard';
 function Playlist({entries}) {
 
     const entryItems = entries.map(entry => (
-        <MemoryCard entry={entry}/>
+        <MemoryCard id={entry.songTitle} entry={entry}/>
     ))
 
     return (

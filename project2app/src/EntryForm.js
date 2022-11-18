@@ -1,5 +1,5 @@
-import {React, useEffect, useState, useRef} from 'react';
-import MemoryCard from './MemoryCard';
+import {React} from 'react';
+
 
 function EntryForm({entries, setEntries}) {
 
@@ -19,6 +19,11 @@ function EntryForm({entries, setEntries}) {
 
         console.log(entryInfo);
 
+        fetch(`https://itunes.apple.com/search?media=music&entity=song&term=${songTitle}`).then(resp => resp.json())
+        .then(data => {
+            console.log(data.results);
+        })
+
         setEntries([...entries, entryInfo]);
     }
     
@@ -34,7 +39,7 @@ function EntryForm({entries, setEntries}) {
             <input type="text" name='date' />
             <h2>Memory :</h2>
             <input type="text" name='memory' />
-            <h2></h2>
+            <h2>""</h2>
             <input type="submit" value="Submit"  />
         </form>
     )

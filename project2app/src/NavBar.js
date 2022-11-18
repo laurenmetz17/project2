@@ -1,7 +1,4 @@
-import { BrowserRouter, Route, NavLink, Switch } from "react-router-dom";
-import About from './About';
-import Playlist from './Playlist';
-import EntryForm from "./EntryForm";
+import { NavLink} from "react-router-dom";
 
 
 function NavBar() {
