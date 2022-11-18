@@ -12,12 +12,13 @@ function NavBar() {
         textDecoration: "none",
         color: "white",
       };
-
+    //add active style 
     return (
         <div id="links">
-            <NavLink to="/" exact style={linkStyles} activeStyle={{background: "darkblue",}}>About</NavLink>
-            <NavLink to="/createEntry" exact style={linkStyles} activeStyle={{background: "darkblue",}}>Create Entry</NavLink>
-            <NavLink to="/playlist" exact style={linkStyles} activeStyle={{background: "darkblue",}}>Your Playlist</NavLink>
+            
+            <NavLink to="/" exact="true" style={linkStyles} >About</NavLink>
+            <NavLink to="/createEntry" exact="true" style={linkStyles} >Create Entry</NavLink>
+            <NavLink to="/playlist" exact="true" style={linkStyles} >Your Playlist</NavLink>
 
         </div>
         
