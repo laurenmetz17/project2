@@ -8,9 +8,11 @@ function EntryForm({entries, setEntries}) {
     function createEntry(event) {
         event.preventDefault();
         const songTitle = event.target.children[1].value;
-        const artist =event.target.children[3].value;
+        const artist = event.target.children[3].value;
         const date = event.target.children[5].value;
         const memory = event.target.children[7].value;
+        // could include a memory image as well 
+
 
         entryInfo.songTitle = songTitle;
         entryInfo.artist = artist;
@@ -21,7 +23,14 @@ function EntryForm({entries, setEntries}) {
 
         fetch(`https://itunes.apple.com/search?media=music&entity=song&term=${songTitle}`).then(resp => resp.json())
         .then(data => {
-            console.log(data.results);
+
+            const songTarget = data.results.filter(song => song.artistName.toLowerCase() === artist.toLowerCase());
+            console.log(songTarget);
+            console.log(songTarget[0]);
+            entryInfo.audioPreview = songTarget[0].previewUrl;
+            console.log(entryInfo.audioPreview);
+            entryInfo.albumCover = songTarget[0].artworkUrl100;
+            console.log(entryInfo.albumCover);
         })
 
         setEntries([...entries, entryInfo]);
