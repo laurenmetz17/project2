@@ -7,9 +7,9 @@ function MemoryCard({entry}) {
 
     //incorporate audio preview
     return(
-        <div class="card">
+        <div className="card">
             <img src={albumCover} alt="album cover"></img>
-            <div class="container">
+            <div className="container">
                 <h4>{`${date}`}</h4>
                 <h5>{`${songTitle}  - ${artist}`}</h5>
                 <p>{memory}</p>
