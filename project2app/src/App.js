@@ -10,11 +10,12 @@ import Playlist from './Playlist';
 function App() {
 
   const [entries, setEntries] = useState([]);
+  //entries is an array of objects 
   return (
     <div className="App">
       <NavBar/>
       <Routes>
-        <Route path="/playlist" element={<Playlist entries={entries}/>}/>
+        <Route path="/playlist" element={<Playlist  setEntries={setEntries} entries={entries}/>}/>
         <Route path="/createEntry"element={<EntryForm setEntries={setEntries} entries={entries}/>}/>
         <Route path="/" element={<About />} />
     </Routes>

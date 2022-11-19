@@ -22,22 +22,24 @@ function EntryForm({entries, setEntries}) {
 
         fetch(`https://itunes.apple.com/search?media=music&entity=song&term=${songTitle}`).then(resp => resp.json())
         .then(data => {
+            console.log(data.results);
 
             const songTarget = data.results.filter(song => song.artistName.toLowerCase() === artist.toLowerCase());
-            entryInfo.audioPreview = songTarget[0].previewUrl;
+            console.log(songTarget);
             entryInfo.albumCover = songTarget[0].artworkUrl100;
-        })
+            entryInfo.audioPreview = songTarget[0].previewUrl;
 
-        fetch('http://localhost:3000/playlist', {
+            fetch('http://localhost:3000/playlist', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
               },
               body: JSON.stringify(entryInfo),
-        }).then(resp => resp.json()).then(() => {
-            console.log(entryInfo)
-            setEntries([...entries, entryInfo]);
-        });
+            }).then(resp => resp.json()).then(() => {
+                console.log(entryInfo)
+                setEntries([...entries, entryInfo]);
+            });
+        })
 
     }
     
