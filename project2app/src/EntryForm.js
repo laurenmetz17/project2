@@ -18,6 +18,8 @@ function EntryForm({entries, setEntries}) {
         entryInfo.artist = artist;
         entryInfo.date = date;
         entryInfo.memory = memory;
+        console.log(entries.length);
+        entryInfo.id = entries.length + 1;
 
 
         fetch(`https://itunes.apple.com/search?media=music&entity=song&term=${songTitle}`).then(resp => resp.json())
@@ -26,6 +28,8 @@ function EntryForm({entries, setEntries}) {
 
             const songTarget = data.results.filter(song => song.artistName.toLowerCase() === artist.toLowerCase());
             console.log(songTarget);
+            //this is sensitive to spaces in the song title and artist 
+            //of the song is not within the first 50 entries also doesnt work 
             entryInfo.albumCover = songTarget[0].artworkUrl100;
             entryInfo.audioPreview = songTarget[0].previewUrl;
 

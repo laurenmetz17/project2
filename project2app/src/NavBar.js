@@ -10,7 +10,6 @@ function NavBar() {
         display: "inline-block",
         width: "31.2%",
         padding: "12px",
-        //margin: "0 6px 6px",
         background: "LightSeaGreen",
         textDecoration: "none",
         color: "white",
@@ -19,18 +18,16 @@ function NavBar() {
         display: "inline-block",
         width: "31.2%",
         padding: "12px",
-        //margin: "0 6px 6px",
         background: "LightBlue",
         textDecoration: "none",
         color: "white",
     }
-    //add active style 
+    //active style for about
 
-    console.log(window.location.pathname);
     return (
         <div id="links">
             
-            <NavLink to="/" exact="true" style={window.location.pathname !== "/createEntry" && window.location.pathname !== "/playlist" ? activeStyles :linkStyles}  
+            <NavLink to="/" exact="true" style={window.location.href === "http://localhost:3001/" || window.location.href === "http://localhose:3001"? activeStyles :linkStyles}  
             onClick={() => {
                 if(aboutActive !== true) {
                 aboutActive = !aboutActive;
@@ -50,7 +47,6 @@ function NavBar() {
                 playlistActive = !playlistActive;
                 aboutActive = false;
                 entryActive = false;
-                console.log("click playlist");
             }}}>Your Playlist</NavLink>
 
         </div>
