@@ -34,3 +34,10 @@ code {
 * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+header {
+  font-size: large;
+  font-weight: bolder;
+  text-align: left;
+  padding-left: 30px;
+}
