@@ -2,7 +2,6 @@ import React from 'react';
 
 function About() {
 
-    console.log(window.location.href);
     return (
         <div id="about">
             <h1>Memory Playlist</h1>

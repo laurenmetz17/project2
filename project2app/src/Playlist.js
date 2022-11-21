@@ -23,7 +23,7 @@ function Playlist({setEntries,entries}) {
     */
 
     const entryItems = entries.map(entry => (
-        <MemoryCard id={entry.key} entry={entry} />
+        <MemoryCard key={entry.songTitle} entry={entry} />
     ))
     
     //dont need to sort the entries assuming its used like a journal and the entries are in time order 

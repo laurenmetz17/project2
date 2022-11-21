@@ -3,7 +3,6 @@ import React from 'react';
 function MemoryCard({entry, handleDelete}) {
 
     const {songTitle,artist,date, memory, albumCover, key ,audioPreview} = entry;
-    console.log(key);
 
     //incorporate audio preview and delete
 
