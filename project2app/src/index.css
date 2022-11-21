@@ -39,5 +39,9 @@ header {
   font-size: large;
   font-weight: bolder;
   text-align: left;
+  color:aliceblue;
   padding-left: 30px;
+  height: 60px;
+  padding-top: 30px;
+  outline: auto;
 }
