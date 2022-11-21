@@ -2,7 +2,6 @@ import React from 'react';
 
 function About() {
 
-    console.log(window.location);
     console.log(window.location.href);
     return (
         <div id="about">
@@ -14,10 +13,12 @@ function About() {
                your memories as an entry associated with a song. 
             </p>
             <h2>How To</h2>
-            <p>Using the naviagation bar at the top of the page you can click on the entry form to record a memory.
-               Input the details about the song of your choosing, the date, and a description of the memory associated with it, then 
-               submit the entry to save it to your memory playlist. In the Playlist tab you can then look through the song memories that 
-               you've added to your playlist in chronological order.
+            <p>1. Using the naviagation bar at the top of the page you can click on the entry form to record a memory <br></br>
+               2. Input the details about the song of your choosing, the date, and a description of the memory associated with it <br></br>
+               3. While the form will handle capitalization be careful not to leave extra spaces or characters in your song title and artist entry <br></br>
+               4. Date should be entered in MM/DD/YYY form <br></br>
+               5. Submit the entry to save it to your memory playlist <br></br>
+               6. In the Playlist tab you can then look through the song memories that you've added to your playlist in chronological order.
             </p>
 
         </div>
