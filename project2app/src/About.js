@@ -19,6 +19,8 @@ function About() {
                5. Submit the entry to save it to your memory playlist <br></br>
                6. In the Playlist tab you can then look through the song memories that you've added to your playlist in chronological order.
             </p>
+            <h2>Sources</h2>
+            <p>All album data fetched from the ITunes API</p>
 
         </div>
     )
