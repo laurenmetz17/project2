@@ -11,15 +11,22 @@ function EntryForm({entries, setEntries}) {
         const artist = event.target.children[3].value;
         const date = event.target.children[5].value;
         const memory = event.target.children[7].value;
-        // could include a memory image as well 
 
+        event.target.children[1].value = "";
+        event.target.children[3].value = "";
+        event.target.children[5].value = "";
+        event.target.children[7].value = "";
+
+
+        // could include a memory image as well 
+        console.log(entries)
 
         entryInfo.songTitle = songTitle;
         entryInfo.artist = artist;
         entryInfo.date = date;
         entryInfo.memory = memory;
-        console.log(entries.length);
-        entryInfo.id = entries.length + 1;
+        //console.log(entries.length);
+        //entryInfo.key = entries.length + 1;
 
 
         fetch(`https://itunes.apple.com/search?media=music&entity=song&term=${songTitle}`).then(resp => resp.json())

@@ -2,8 +2,8 @@ import React from 'react';
 
 function MemoryCard({entry, handleDelete}) {
 
-    const {songTitle,artist,date, memory, albumCover, id ,audioPreview} = entry;
-    console.log(id);
+    const {songTitle,artist,date, memory, albumCover, key ,audioPreview} = entry;
+    console.log(key);
 
     //incorporate audio preview
 
@@ -14,7 +14,8 @@ function MemoryCard({entry, handleDelete}) {
                 <h4>{`${date}`}</h4>
                 <h5>{`${songTitle}  - ${artist}`}</h5>
                 <p>{memory}</p>
-                <button id={id} onClick={handleDelete}>Delete Entry</button>
+                {/*<a href={audioPreview}>ITunes Audio Preview</a>
+                <button id={key} onClick={handleDelete}>Delete Entry</button>*/}
             </div>
         </div>
     )

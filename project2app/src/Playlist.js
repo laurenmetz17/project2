@@ -13,15 +13,17 @@ function Playlist({setEntries,entries}) {
     },[])
 
 
-    function handleDelete(e) {
+    /*function handleDelete(e) {
         console.log(e.target.id);
-        const newEntries = entries.filter(entry => e.target.id !== entry.id.toString())
+        const newEntries = entries.filter(entry => e.target.id !== entry.key.toString())
         setEntries(newEntries);
 
         fetch(`http://localhost:3000/playlist/${e.target.id}`,{method:"DELETE"})
     }
+    */
+
     const entryItems = entries.map(entry => (
-        <MemoryCard id={entry.id} entry={entry} handleDelete={handleDelete}/>
+        <MemoryCard id={entry.key} entry={entry} />
     ))
     
     //dont need to sort the entries assuming its used like a journal and the entries are in time order 

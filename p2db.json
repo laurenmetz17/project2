@@ -1,3 +1,22 @@
 {
-  "playlist": []
+  "playlist": [
+    {
+      "songTitle": "where did our love go",
+      "artist": "soft cell",
+      "date": "08/19/2019",
+      "memory": "Making dinner and dancing around in the kitchen with my parents",
+      "albumCover": "https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/70/ff/8c/70ff8c59-95dc-5444-fd3b-81204d0477e5/00600753223598.rgb.jpg/100x100bb.jpg",
+      "audioPreview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/75/71/0c/75710c13-e79b-4e27-1dfc-775c0afa189d/mzaf_3253837660490573264.plus.aac.p.m4a",
+      "id": 1
+    },
+    {
+      "songTitle": "slide away",
+      "artist": "miley cyrus",
+      "date": "07/29/2020",
+      "memory": "Hanging out on the roof with my friends in my college house",
+      "albumCover": "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/44/6a/b2/446ab2e5-27ca-3dbb-24c0-4e8cecf00f0f/886447902691.jpg/100x100bb.jpg",
+      "audioPreview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/0c/85/5c/0c855cc2-c866-4d82-9c91-22ad92717a05/mzaf_9374262450177357077.plus.aac.p.m4a",
+      "id": 2
+    }
+  ]
 }
