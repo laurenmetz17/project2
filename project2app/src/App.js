@@ -13,6 +13,7 @@ function App() {
   //entries is an array of objects 
   return (
     <div className="App">
+      <header style={{background: "LightSeaGreen"}}>Memory Playlist</header>
       <NavBar/>
       <Routes>
         <Route path="/playlist" element={<Playlist  setEntries={setEntries} entries={entries}/>}/>
