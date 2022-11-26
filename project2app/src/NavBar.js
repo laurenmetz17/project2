@@ -34,14 +34,14 @@ function NavBar() {
                 playlistActive = false;
                 entryActive = false;
             }}}>About</NavLink>
-            <NavLink to="/createEntry" exact="true" style={window.location.pathname === "/createEntry" ? activeStyles :linkStyles} 
+            <NavLink to="/entries/new" exact="true" style={window.location.pathname === "/entries/new" ? activeStyles :linkStyles} 
             onClick={() => {
                 if(entryActive !== true) {
                 entryActive = !entryActive;
                 playlistActive = false;
                 aboutActive = false;
             }}}>Create Entry</NavLink>
-            <NavLink to="/playlist" exact="true" style={window.location.pathname === "/playlist" ? activeStyles :linkStyles} 
+            <NavLink to="/entries" exact="true" style={window.location.pathname === "/entries" ? activeStyles :linkStyles} 
             onClick={() => {
                 if(playlistActive !== true) {
                 playlistActive = !playlistActive;

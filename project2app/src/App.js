@@ -16,8 +16,8 @@ function App() {
       <header style={{background: "LightSeaGreen"}}>Memory Playlist</header>
       <NavBar/>
       <Routes>
-        <Route path="/playlist" element={<Playlist  setEntries={setEntries} entries={entries}/>}/>
-        <Route path="/createEntry"element={<EntryForm setEntries={setEntries} entries={entries}/>}/>
+        <Route path="/entries" element={<Playlist  setEntries={setEntries} entries={entries}/>}/>
+        <Route path="/entries/new" element={<EntryForm setEntries={setEntries} entries={entries}/>}/>
         <Route path="/" element={<About />} />
     </Routes>
     </div>
